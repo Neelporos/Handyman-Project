@@ -1,0 +1,265 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@500;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: 'Raleway', sans-serif;
+    background-color: #121212;
+}
+.container{
+    max-width: 1000px;
+    margin: 0 auto;
+}
+.banner{
+    display: flex;
+    height: 100vh;
+}
+.banner-left{
+    flex: 1;
+    color: white;
+    display: flex;
+    align-items: center;
+}
+.banner-right{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.banner-title{
+    font-size: 60px;
+    white-space: nowrap;
+    position: relative;
+    color: transparent;
+}
+.banner-text{
+    line-height: 2;
+    margin: 20px 0;
+}
+.button{
+    outline: 0;
+    padding: 10px 40px;
+    font-size: 18px;
+    background-color: aqua;
+    color: white;
+    border: 4px solid aqua;
+    cursor: pointer;
+    transition: .3s linear;
+}
+.button:hover{
+    background-color: transparent;
+    color: aqua;
+}
+.banner-title::before{
+    content: 'Contactor David';
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: aqua;
+    animation: typing 3s linear infinite;
+}
+
+@keyframes typing{
+    0%{
+        content: 'C|';
+    }
+    4%{
+        content: 'Co|';
+    }
+    8%{
+        content: 'Con|';
+    }
+    12%{
+        content: 'Cont|';
+    }
+    16%{
+        content: 'Conta|';
+    }
+    20%{
+        content: 'Contac|';
+    }
+    24%{
+        content: 'Contact|';
+    }
+    28%{
+        content: 'Contacto|';
+    }
+    32%{
+        content: 'Contactor|';
+    }
+    36%{
+        content: 'Contactor |';
+    }
+    40%{
+        content: 'Contactor D|';
+    }
+    44%{
+        content: 'Contactor Da|';
+    }
+    48%{
+        content: 'Contactor Dav|';
+    }
+    52%{
+        content: 'Contactor Davi|';
+    }
+    56%{
+        content: 'Contactor David|';
+    }
+    
+    60%,
+    84%{
+        content: 'Contactor David|';
+    }
+    85%{
+        content: 'Contactor Davi|';
+    }
+    86%{
+        content: 'Contactor Dav|';
+    }
+    87%{
+        content: 'Contactor Da|';
+    }
+    88%{
+        content: 'Contactor D|';
+    }
+    89%{
+        content: 'Contactor |';
+    }
+    90%{
+        content: 'Contactor|';
+    }
+    91%{
+        content: 'Contacto|';
+    }
+    92%{
+        content: 'Contact|';
+    }
+    93%{
+        content: 'Contac|';
+    }
+    94%{
+        content: 'Conta|';
+    }
+    95%{
+        content: 'Cont|';
+    }
+    96%{
+        content: 'Con|';
+    }
+    97%{
+        content: 'Co|';
+    }
+    98%{
+        content: 'C|';
+    }
+    99%{
+        content: '|';
+    }
+    100%{
+        content: '|';
+    }
+}
+.banner img{
+    border: 4px solid aqua;
+}
+.section-title{
+    text-align: center;
+}
+.section-title h1{
+    color: aqua;
+    font-size: 40px;
+    margin: 50px 0;
+    border-left: 3px solid aqua;
+    border-right: 3px solid aqua;
+    display: inline-block;
+    padding: 0 10px;
+    line-height: .8;
+}
+.gallery{
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+.photo{
+    width: 280px;
+    height: 280px;
+    position: relative;
+    overflow: hidden;
+}
+.photo img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.border{
+    background-color: white;
+    position: absolute;
+    transition: .7s ease-in-out;
+}
+.border.top, .border.bottom{
+    width: 270px;
+    height: 4px;
+    
+}
+.border.left, .border.right{
+    width: 4px;
+    height: 270px;
+}
+.border.top{
+    top: 5px;
+    right: 100%;
+}
+.border.bottom{
+    bottom: 5px;
+    left: 100%;
+}
+.border.left{
+    left: 5px;
+    top: 100%;
+}
+.border.right{
+    right: 5px;
+    bottom: 100%;
+}
+.photo:hover .border.top{
+    right: 5px;
+}
+.photo:hover .border.bottom{
+    left: 5px;
+}
+.photo:hover .border.left{
+    top: 5px;
+}
+.photo:hover .border.right{
+    bottom: 5px;
+}
+.photo-content{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    color: white;
+    padding-left: 20px;
+    bottom: 0;
+    left: 0;
+    transform: translateY(400px);
+    transition: 0.3s ease-out;
+}
+.photo:hover .photo-content{
+    transform: translatey(180px);
+}
+.photo::before{
+    content: "";
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background-color: rgba(0, 0, 0, .5);
+    opacity: 0;
+    top: 0;
+    left: 0;
+    transition: .3s linear;
+}
+.photo:hover::before{
+    opacity: 1;
+}
